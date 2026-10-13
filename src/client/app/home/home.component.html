@@ -5,6 +5,11 @@
   <button type="submit">Add</button>
 </form>
 
+<label class="search">
+  <input type="search" [(ngModel)]="searchTerm" name="searchTerm"
+    placeholder="Search computer scientists" aria-label="Search computer scientists">
+</label>
+
 <ul>
-  <li *ngFor="let name of names">{{ name }}</li>
+  <li *ngFor="let name of filteredNames">{{ name }}</li>
 </ul>

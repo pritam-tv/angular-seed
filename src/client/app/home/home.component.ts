@@ -13,6 +13,7 @@ import { NameListService } from '../shared/name-list/name-list.service';
 export class HomeComponent implements OnInit {
 
   newName = '';
+  searchTerm = '';
   errorMessage: string;
   names: any[] = [];
 
@@ -40,6 +41,17 @@ export class HomeComponent implements OnInit {
         names => this.names = names,
         error => this.errorMessage = <any>error
       );
+  }
+
+  /**
+   * The names that match the current search term, or all names when the search is empty.
+   */
+  get filteredNames(): any[] {
+    const term = this.searchTerm.trim().toLowerCase();
+    if (!term) {
+      return this.names;
+    }
+    return this.names.filter(name => String(name).toLowerCase().includes(term));
   }
 
   /**
