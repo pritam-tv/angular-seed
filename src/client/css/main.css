@@ -69,3 +69,57 @@ button {
 button:hover {
   background-color: #28739e;
 }
+
+/* Dark theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-theme a {
+  color: #64b5f6;
+}
+
+body.dark-theme input {
+  background-color: #1e1e1e;
+  border-color: #64b5f6;
+  color: #e0e0e0;
+}
+
+body.dark-theme button {
+  background-color: #1565c0;
+}
+
+body.dark-theme button:hover {
+  background-color: #1e88e5;
+}
+
+body.dark-theme.dark-theme sd-toolbar {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.dark-theme.dark-theme sd-toolbar .more {
+  filter: invert(1);
+}
+
+body.dark-theme.dark-theme sd-toolbar .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+body.dark-theme.dark-theme sd-toolbar .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-theme.dark-theme sd-navbar {
+  border-bottom-color: #333;
+}
+
+body.dark-theme.dark-theme sd-navbar nav a {
+  color: #9e9e9e;
+}
+
+body.dark-theme.dark-theme sd-navbar nav a.router-link-active {
+  color: #64b5f6;
+}

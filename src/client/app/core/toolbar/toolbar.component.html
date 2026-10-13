@@ -1,2 +1,7 @@
 <h1>Angular Seed</h1>
+<button class="theme-toggle" type="button" (click)="toggleTheme()"
+  [attr.aria-pressed]="themeService.isDark()"
+  [title]="themeService.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+  {{ themeService.isDark() ? 'Light mode' : 'Dark mode' }}
+</button>
 <div class="more"></div>
